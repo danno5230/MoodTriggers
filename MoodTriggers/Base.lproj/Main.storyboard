@@ -1,13 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MoodTriggers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +17,453 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sqP-9O-FOO">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anxiety and Depression App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nyc-oB-Fso">
+                                        <rect key="frame" x="8" y="18" width="389" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="w1o-Uc-SB6"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zWH-5m-kzc">
+                                <rect key="frame" x="162" y="539" width="276" height="30"/>
+                                <state key="normal" title="I do not want to participate in the survey"/>
+                                <connections>
+                                    <action selector="doNotParticipate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5tf-d6-1m9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbz-qz-oTN">
+                                <rect key="frame" x="186" y="501" width="228" height="30"/>
+                                <state key="normal" title="I want to participate in the survey"/>
+                                <connections>
+                                    <action selector="participate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4br-eU-18q"/>
+                                    <segue destination="6hO-8x-y8f" kind="show" id="3Tl-MQ-El1"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5c-Q7-3Ma">
+                                <rect key="frame" x="20" y="118" width="560" height="375"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">The purpose of this research is to examine the relationship between past moods and ability to predict future moodsProcedures to be followed: This application will prompt you about your mood, your heart rate, your phones movement, information about your phone's location, and the times of outgoing and incoming text messages and calls (no content about the calls themselves will be recorded). This application
+will prompt you to complete information once per hour, until you decide to stop. Discomforts and Risks: There are no risks in participating in this research beyond those experienced in everyday life. Some of the questions ask about anxiety and depression, which is personal and may cause discomfort. If you experience distress during this study please contact Nicholas Jacobson at ncj2@psu.edu or 814-963-0115. Benefits: This research may provide a better understand of how mood states impact each other. While you are participating this application may help you to become more aware of triggers of your mood Duration/Time: The amount of time you use this application is completely up to you. The application is designed to prompt you once per hour starting when you wake up and stop when you go to sleep. Each prompt will take less than five minutes. Statement of Confidentiality Your participation in this research is confidential. To help protect your confidentiality, we will assign you a participant number. The participant number will be used to identify your questionnaire data. The data will be stored on a secure online server, and in locked offices.
+        The Pennsylvania State University's office for research protections, the institutional review board, and the office for human research protections in the department of health and human services may review records related to this research study. Additionally, only members of Dr. Michelle Newman’s research lab will have access to the data. In the event of publication or presentation resulting from the research, no personally identifiable information will be shared. Your confidentiality will be kept to the degree permitted by the technology used. No guarantees can be made regarding the interception of data sent via the smartphone app by any third parties. Right to Ask Questions: Please contact Nicholas Jacobson at 814-863-0115 or ncj@psu.edu with questions, complaints, or concerns about this research. You can also call this number if you feel this study has harmed you. If you have any questions, concerns, problems, about your rights as a research participant or would like to offer input, please contact the Pennsylvania state university’s office for research protections (ORP) at (814) 865-1775. The ORP cannot answer questions about research procedures. Questions about research procedures can be answered by the research team. You will not be paid for participating in this research. Voluntary Participation: Your decision to be in this research is voluntary. You can stop at any time. You do not have to answer any questions that you do not want to answer. Refusal to take part in or withdrawing from this study will involve no penalty or loss of benefits that you would otherwise receive.                        Thanks for reading!</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zWH-5m-kzc" firstAttribute="top" secondItem="wbz-qz-oTN" secondAttribute="bottom" constant="8" id="7y5-YF-g4C"/>
+                            <constraint firstItem="sqP-9O-FOO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="EaU-EB-T4F"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sqP-9O-FOO" secondAttribute="trailing" constant="-20" id="RDe-7D-hcn"/>
+                            <constraint firstItem="s5c-Q7-3Ma" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="RaP-vp-JH5"/>
+                            <constraint firstItem="zWH-5m-kzc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Vaj-oP-ylQ"/>
+                            <constraint firstItem="zWH-5m-kzc" firstAttribute="centerX" secondItem="wbz-qz-oTN" secondAttribute="centerX" id="WqO-kO-Bhc"/>
+                            <constraint firstItem="s5c-Q7-3Ma" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="krI-nd-otp"/>
+                            <constraint firstItem="sqP-9O-FOO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="w06-i7-cas"/>
+                            <constraint firstItem="s5c-Q7-3Ma" firstAttribute="top" secondItem="sqP-9O-FOO" secondAttribute="bottom" constant="8" id="wG8-B0-NuE"/>
+                            <constraint firstItem="wbz-qz-oTN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="x5g-wA-TQs"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="zWH-5m-kzc" secondAttribute="bottom" constant="31" id="z5C-YE-cEK"/>
+                            <constraint firstItem="wbz-qz-oTN" firstAttribute="top" secondItem="s5c-Q7-3Ma" secondAttribute="bottom" constant="8" id="zj2-rj-6p0"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="questionLabel" destination="s5c-Q7-3Ma" id="Qg0-lL-1VX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="463" y="-28"/>
+        </scene>
+        <!--Start Quesiton View-->
+        <scene sceneID="aig-jg-4xQ">
+            <objects>
+                <viewController id="6hO-8x-y8f" customClass="StartQuesitonView" customModule="MoodTriggers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ueK-hA-wUG"/>
+                        <viewControllerLayoutGuide type="bottom" id="DqI-a7-Bgf"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Og9-LR-hYw">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following questions are going to ask you for information about yourself and your sleeping patterns." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Trk-RF-bq2">
+                                <rect key="frame" x="114" y="118" width="372" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="372" id="ZUh-Nn-fb8"/>
+                                    <constraint firstAttribute="width" constant="372" id="ka7-j9-VZ7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jd5-h8-8Oj">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Anxiety and Depression App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XHT-gy-ic1">
+                                        <rect key="frame" x="8" y="18" width="389" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="A3m-18-6St"/>
+                                </constraints>
+                            </view>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ftb-r6-FYc">
+                                <rect key="frame" x="0.0" y="204" width="600" height="216"/>
+                            </pickerView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eCI-2K-CPc">
+                                <rect key="frame" x="225" y="297" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="ri7-FI-Qb7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwY-de-Zjl">
+                                <rect key="frame" x="530" y="550" width="41" height="30"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <segue destination="J53-eG-BzK" kind="show" id="3aK-mQ-z8D"/>
+                                </connections>
+                            </button>
+                            <datePicker hidden="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="kde-tV-Zjc">
+                                <rect key="frame" x="0.0" y="204" width="600" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="482099634.57232797">
+                                    <!--2016-04-11 20:33:54 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AOm-MY-jjz">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="startSurvey:" destination="6hO-8x-y8f" eventType="touchUpInside" id="eFZ-NX-CCJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Trk-RF-bq2" firstAttribute="centerX" secondItem="Og9-LR-hYw" secondAttribute="centerX" id="1pv-EW-Xei"/>
+                            <constraint firstItem="eCI-2K-CPc" firstAttribute="centerX" secondItem="ftb-r6-FYc" secondAttribute="centerX" id="2gR-BN-pFY"/>
+                            <constraint firstItem="DqI-a7-Bgf" firstAttribute="top" secondItem="AOm-MY-jjz" secondAttribute="bottom" constant="20" id="9tq-rp-RYg"/>
+                            <constraint firstItem="eCI-2K-CPc" firstAttribute="top" secondItem="Trk-RF-bq2" secondAttribute="bottom" constant="118" id="AQf-Ar-abD"/>
+                            <constraint firstItem="kde-tV-Zjc" firstAttribute="trailing" secondItem="ftb-r6-FYc" secondAttribute="trailing" id="Hgk-T4-8aq"/>
+                            <constraint firstItem="DqI-a7-Bgf" firstAttribute="top" secondItem="cwY-de-Zjl" secondAttribute="bottom" constant="20" id="Jso-EI-JJa"/>
+                            <constraint firstItem="kde-tV-Zjc" firstAttribute="top" secondItem="ftb-r6-FYc" secondAttribute="top" id="Kbc-1e-9Cz"/>
+                            <constraint firstItem="AOm-MY-jjz" firstAttribute="centerX" secondItem="Og9-LR-hYw" secondAttribute="centerX" id="Kvi-65-8yx"/>
+                            <constraint firstItem="eCI-2K-CPc" firstAttribute="centerX" secondItem="Trk-RF-bq2" secondAttribute="centerX" id="MYX-63-hOg"/>
+                            <constraint firstItem="jd5-h8-8Oj" firstAttribute="leading" secondItem="Og9-LR-hYw" secondAttribute="leadingMargin" constant="-20" id="Ms1-l8-2W9"/>
+                            <constraint firstItem="AOm-MY-jjz" firstAttribute="top" secondItem="eCI-2K-CPc" secondAttribute="bottom" constant="223" id="QDW-wS-fwq"/>
+                            <constraint firstItem="jd5-h8-8Oj" firstAttribute="top" secondItem="ueK-hA-wUG" secondAttribute="bottom" id="RvP-EH-8Sb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="jd5-h8-8Oj" secondAttribute="trailing" constant="-20" id="c60-AO-sm3"/>
+                            <constraint firstItem="eCI-2K-CPc" firstAttribute="centerY" secondItem="ftb-r6-FYc" secondAttribute="centerY" id="hrZ-EN-qUz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cwY-de-Zjl" secondAttribute="trailing" constant="9" id="jjM-QR-hqP"/>
+                            <constraint firstItem="kde-tV-Zjc" firstAttribute="leading" secondItem="ftb-r6-FYc" secondAttribute="leading" id="jxw-uu-e3N"/>
+                            <constraint firstItem="Trk-RF-bq2" firstAttribute="top" secondItem="jd5-h8-8Oj" secondAttribute="bottom" constant="8" id="t52-gA-r7T"/>
+                            <constraint firstItem="kde-tV-Zjc" firstAttribute="leading" secondItem="jd5-h8-8Oj" secondAttribute="leading" id="yYP-2w-GkQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerPicker" destination="ftb-r6-FYc" id="ryf-6X-ENh"/>
+                        <outlet property="finishButton" destination="cwY-de-Zjl" id="1KE-hK-6Ec"/>
+                        <outlet property="nextButton" destination="AOm-MY-jjz" id="eMX-tb-wGG"/>
+                        <outlet property="questionLabel" destination="Trk-RF-bq2" id="tiC-tE-dph"/>
+                        <outlet property="textAnswer" destination="eCI-2K-CPc" id="YJi-s0-Ggf"/>
+                        <outlet property="timePicker" destination="kde-tV-Zjc" id="0qu-RQ-GUe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k1Y-40-5Fq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1273" y="-28"/>
+        </scene>
+        <!--Worry Questions View-->
+        <scene sceneID="AfS-G5-1fe">
+            <objects>
+                <viewController id="J53-eG-BzK" customClass="WorryQuestionsView" customModule="MoodTriggers" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="u9s-Gr-FMg"/>
+                        <viewControllerLayoutGuide type="bottom" id="LMb-7H-r3o"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WOE-KG-hbY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ali-Mf-prK">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anxiety and Depression App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ms1-4h-9df">
+                                        <rect key="frame" x="8" y="18" width="376" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="Ms1-4h-9df" secondAttribute="bottom" constant="18" id="LUR-yW-i8v"/>
+                                    <constraint firstItem="Ms1-4h-9df" firstAttribute="top" secondItem="ali-Mf-prK" secondAttribute="top" constant="18" id="TqD-Cg-Qd0"/>
+                                    <constraint firstItem="Ms1-4h-9df" firstAttribute="leading" secondItem="ali-Mf-prK" secondAttribute="leading" constant="8" id="XNy-HW-iPw"/>
+                                    <constraint firstAttribute="height" constant="90" id="fwz-cA-RcN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J7s-wp-JNR">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="startSurvey:" destination="6hO-8x-y8f" eventType="touchUpInside" id="rhx-KS-CNH"/>
+                                    <action selector="startSurvey:" destination="J53-eG-BzK" eventType="touchUpInside" id="z3s-7f-xBd"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following questions will ask you about your worries." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQr-qh-ghh">
+                                <rect key="frame" x="133" y="118" width="334" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="uJ4-iq-FTR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Der-dB-SYG">
+                                <rect key="frame" x="0.0" y="140" width="600" height="216"/>
+                            </pickerView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="w6T-7B-Tvo">
+                                <rect key="frame" x="225" y="233" width="151" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="151" id="naz-j6-NZu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmx-Z8-g5z">
+                                <rect key="frame" x="539" y="550" width="41" height="30"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <segue destination="VMe-Cq-I3r" kind="show" id="WEU-iU-fWL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="J7s-wp-JNR" firstAttribute="centerX" secondItem="Der-dB-SYG" secondAttribute="centerX" id="5R2-jD-IWC"/>
+                            <constraint firstItem="wQr-qh-ghh" firstAttribute="centerX" secondItem="ali-Mf-prK" secondAttribute="centerX" id="8VR-yj-vWg"/>
+                            <constraint firstAttribute="bottom" secondItem="J7s-wp-JNR" secondAttribute="bottom" constant="20" symbolic="YES" id="G6T-dQ-7sO"/>
+                            <constraint firstItem="ali-Mf-prK" firstAttribute="top" secondItem="u9s-Gr-FMg" secondAttribute="bottom" id="GfP-oz-dRD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Der-dB-SYG" secondAttribute="trailing" constant="-20" id="HHE-3T-j09"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ali-Mf-prK" secondAttribute="trailing" constant="-20" id="I7h-0e-QpM"/>
+                            <constraint firstItem="Der-dB-SYG" firstAttribute="leading" secondItem="WOE-KG-hbY" secondAttribute="leadingMargin" constant="-20" id="Xzt-Mf-7ti"/>
+                            <constraint firstItem="w6T-7B-Tvo" firstAttribute="top" secondItem="wQr-qh-ghh" secondAttribute="bottom" constant="74" id="YnL-bW-92n"/>
+                            <constraint firstItem="w6T-7B-Tvo" firstAttribute="centerY" secondItem="Der-dB-SYG" secondAttribute="centerY" id="azF-pl-ED1"/>
+                            <constraint firstItem="wQr-qh-ghh" firstAttribute="centerX" secondItem="w6T-7B-Tvo" secondAttribute="centerX" id="f4U-mG-MIc"/>
+                            <constraint firstItem="bmx-Z8-g5z" firstAttribute="trailing" secondItem="WOE-KG-hbY" secondAttribute="trailingMargin" id="n1Q-ey-bPJ"/>
+                            <constraint firstItem="LMb-7H-r3o" firstAttribute="top" secondItem="bmx-Z8-g5z" secondAttribute="bottom" constant="20" id="qUy-lB-h9b"/>
+                            <constraint firstItem="ali-Mf-prK" firstAttribute="leading" secondItem="WOE-KG-hbY" secondAttribute="leadingMargin" constant="-20" id="w6I-SP-XoF"/>
+                            <constraint firstItem="wQr-qh-ghh" firstAttribute="top" secondItem="ali-Mf-prK" secondAttribute="bottom" constant="8" id="zHn-4m-2yz"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerPicker" destination="Der-dB-SYG" id="v4F-4G-gxi"/>
+                        <outlet property="finishButton" destination="bmx-Z8-g5z" id="siS-6p-jnm"/>
+                        <outlet property="nextButton" destination="J7s-wp-JNR" id="X5D-w3-JJe"/>
+                        <outlet property="questionLabel" destination="wQr-qh-ghh" id="9eA-a1-QMu"/>
+                        <outlet property="textAnswer" destination="w6T-7B-Tvo" id="Bed-8b-UQ2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Fw-yK-ZfW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2109" y="-28"/>
+        </scene>
+        <!--Social Questions View-->
+        <scene sceneID="S2r-zo-fkw">
+            <objects>
+                <viewController id="VMe-Cq-I3r" customClass="SocialQuestionsView" customModule="MoodTriggers" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdg-HK-mwc"/>
+                        <viewControllerLayoutGuide type="bottom" id="qh2-nM-Qvd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0go-Sv-lwm">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mcK-Vk-XNB">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anxiety and Depression App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="my6-88-qMb">
+                                        <rect key="frame" x="8" y="18" width="376" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="my6-88-qMb" firstAttribute="leading" secondItem="mcK-Vk-XNB" secondAttribute="leading" constant="8" id="4oD-M8-Kyo"/>
+                                    <constraint firstAttribute="height" constant="90" id="ToP-fy-FdN"/>
+                                    <constraint firstAttribute="bottom" secondItem="my6-88-qMb" secondAttribute="bottom" constant="18" id="ncj-c1-UaD"/>
+                                    <constraint firstItem="my6-88-qMb" firstAttribute="top" secondItem="mcK-Vk-XNB" secondAttribute="top" constant="18" id="rQS-l0-KCU"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lyM-eE-6z5">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="startSurvey:" destination="6hO-8x-y8f" eventType="touchUpInside" id="6WG-07-SkM"/>
+                                    <action selector="startSurvey:" destination="VMe-Cq-I3r" eventType="touchUpInside" id="M45-Ts-BnU"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following questions will ask you about your responses to different social situations." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dwR-1W-eeZ">
+                                <rect key="frame" x="133" y="118" width="334" height="61"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="hwr-uB-DTK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KMl-OH-OOq">
+                                <rect key="frame" x="0.0" y="187" width="600" height="216"/>
+                            </pickerView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5I5-Ip-M0O">
+                                <rect key="frame" x="225" y="280" width="151" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Rp-c7-wkl">
+                                <rect key="frame" x="539" y="550" width="41" height="30"/>
+                                <state key="normal" title="Finish"/>
+                                <connections>
+                                    <segue destination="7Kl-Wp-4Vw" kind="show" id="m2f-hk-yLs"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="5I5-Ip-M0O" secondAttribute="trailing" constant="204" id="0Pg-hY-x2N"/>
+                            <constraint firstItem="KMl-OH-OOq" firstAttribute="leading" secondItem="0go-Sv-lwm" secondAttribute="leadingMargin" constant="-20" id="0dU-Vv-e8b"/>
+                            <constraint firstItem="mcK-Vk-XNB" firstAttribute="top" secondItem="jdg-HK-mwc" secondAttribute="bottom" id="37H-FZ-QcM"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="KMl-OH-OOq" secondAttribute="trailing" constant="-20" id="3Q2-cv-jjW"/>
+                            <constraint firstItem="5I5-Ip-M0O" firstAttribute="top" secondItem="dwR-1W-eeZ" secondAttribute="bottom" constant="101" id="Bbb-dK-TWm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="mcK-Vk-XNB" secondAttribute="trailing" constant="-20" id="Dlq-dP-fWx"/>
+                            <constraint firstItem="8Rp-c7-wkl" firstAttribute="trailing" secondItem="0go-Sv-lwm" secondAttribute="trailingMargin" id="NSr-rR-2hB"/>
+                            <constraint firstItem="qh2-nM-Qvd" firstAttribute="top" secondItem="lyM-eE-6z5" secondAttribute="bottom" constant="20" id="Nfh-zS-Rpk"/>
+                            <constraint firstItem="KMl-OH-OOq" firstAttribute="top" secondItem="dwR-1W-eeZ" secondAttribute="bottom" constant="8" symbolic="YES" id="Q2R-mt-Flh"/>
+                            <constraint firstItem="lyM-eE-6z5" firstAttribute="centerX" secondItem="0go-Sv-lwm" secondAttribute="centerX" id="cXE-qV-XjR"/>
+                            <constraint firstItem="5I5-Ip-M0O" firstAttribute="leading" secondItem="0go-Sv-lwm" secondAttribute="leadingMargin" constant="205" id="f3l-cG-DRP"/>
+                            <constraint firstItem="dwR-1W-eeZ" firstAttribute="top" secondItem="mcK-Vk-XNB" secondAttribute="bottom" constant="8" id="gh6-a1-2H8"/>
+                            <constraint firstItem="mcK-Vk-XNB" firstAttribute="leading" secondItem="0go-Sv-lwm" secondAttribute="leadingMargin" constant="-20" id="hDb-oN-jGD"/>
+                            <constraint firstItem="dwR-1W-eeZ" firstAttribute="centerX" secondItem="mcK-Vk-XNB" secondAttribute="centerX" id="qYp-fe-c3F"/>
+                            <constraint firstItem="qh2-nM-Qvd" firstAttribute="top" secondItem="8Rp-c7-wkl" secondAttribute="bottom" constant="20" id="rb5-jo-Tih"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerPicker" destination="KMl-OH-OOq" id="xWb-CL-ZFZ"/>
+                        <outlet property="nextButton" destination="lyM-eE-6z5" id="z2z-39-B28"/>
+                        <outlet property="questionLabel" destination="dwR-1W-eeZ" id="HEe-ID-zaB"/>
+                        <outlet property="textAnswer" destination="5I5-Ip-M0O" id="xme-Qd-7n7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tuC-Rs-7m9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2881" y="-28"/>
+        </scene>
+        <!--Social Questions View-->
+        <scene sceneID="GLh-RV-YvC">
+            <objects>
+                <viewController id="7Kl-Wp-4Vw" customClass="SocialQuestionsView" customModule="MoodTriggers" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hun-ER-aTX"/>
+                        <viewControllerLayoutGuide type="bottom" id="9Gj-hc-eYy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="v58-54-YBr">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nh0-3o-xtC">
+                                <rect key="frame" x="0.0" y="20" width="600" height="90"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Anxiety and Depression App" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kde-SN-3Kk">
+                                        <rect key="frame" x="8" y="18" width="376" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Kde-SN-3Kk" firstAttribute="leading" secondItem="nh0-3o-xtC" secondAttribute="leading" constant="8" id="CTZ-vw-SdW"/>
+                                    <constraint firstAttribute="height" constant="90" id="SFT-DA-lgQ"/>
+                                    <constraint firstItem="Kde-SN-3Kk" firstAttribute="top" secondItem="nh0-3o-xtC" secondAttribute="top" constant="18" id="Zw5-Wn-B6X"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kde-SN-3Kk" secondAttribute="bottom" constant="18" id="smt-dw-k6O"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nzM-7k-teX">
+                                <rect key="frame" x="284" y="550" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="startSurvey:" destination="6hO-8x-y8f" eventType="touchUpInside" id="Fq3-qL-BOA"/>
+                                    <action selector="startSurvey:" destination="7Kl-Wp-4Vw" eventType="touchUpInside" id="sxY-Me-Oov"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The following questions will ask you about your feel in your life." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="erO-65-m75">
+                                <rect key="frame" x="133" y="118" width="334" height="41"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="334" id="4HO-Dl-CES"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTP-jE-4Cf">
+                                <rect key="frame" x="0.0" y="167" width="600" height="216"/>
+                            </pickerView>
+                            <textField hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNS-T7-h76">
+                                <rect key="frame" x="225" y="260" width="151" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="axT-tp-cVc">
+                                <rect key="frame" x="539" y="550" width="41" height="30"/>
+                                <state key="normal" title="Finish"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vNS-T7-h76" firstAttribute="top" secondItem="erO-65-m75" secondAttribute="bottom" constant="101" id="4wH-KU-YOS"/>
+                            <constraint firstItem="erO-65-m75" firstAttribute="top" secondItem="nh0-3o-xtC" secondAttribute="bottom" constant="8" id="7Ob-Zi-Ymo"/>
+                            <constraint firstItem="RTP-jE-4Cf" firstAttribute="top" secondItem="erO-65-m75" secondAttribute="bottom" constant="8" symbolic="YES" id="7s7-bO-QO8"/>
+                            <constraint firstItem="9Gj-hc-eYy" firstAttribute="top" secondItem="axT-tp-cVc" secondAttribute="bottom" constant="20" id="BFH-jU-yw6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nh0-3o-xtC" secondAttribute="trailing" constant="-20" id="Be3-nD-0in"/>
+                            <constraint firstItem="9Gj-hc-eYy" firstAttribute="top" secondItem="nzM-7k-teX" secondAttribute="bottom" constant="20" id="CaO-CZ-GPg"/>
+                            <constraint firstItem="axT-tp-cVc" firstAttribute="trailing" secondItem="v58-54-YBr" secondAttribute="trailingMargin" id="Cb9-57-7Qy"/>
+                            <constraint firstItem="nh0-3o-xtC" firstAttribute="top" secondItem="hun-ER-aTX" secondAttribute="bottom" id="SDi-nN-vLg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vNS-T7-h76" secondAttribute="trailing" constant="204" id="Xwh-Mf-sg8"/>
+                            <constraint firstItem="erO-65-m75" firstAttribute="centerX" secondItem="nh0-3o-xtC" secondAttribute="centerX" id="Z66-X6-Yqo"/>
+                            <constraint firstItem="nzM-7k-teX" firstAttribute="centerX" secondItem="v58-54-YBr" secondAttribute="centerX" id="a3v-ar-Daz"/>
+                            <constraint firstItem="RTP-jE-4Cf" firstAttribute="leading" secondItem="v58-54-YBr" secondAttribute="leadingMargin" constant="-20" id="eCD-yX-2hI"/>
+                            <constraint firstItem="nh0-3o-xtC" firstAttribute="leading" secondItem="v58-54-YBr" secondAttribute="leadingMargin" constant="-20" id="hou-Yh-MED"/>
+                            <constraint firstItem="vNS-T7-h76" firstAttribute="leading" secondItem="v58-54-YBr" secondAttribute="leadingMargin" constant="205" id="rzH-fs-aPT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RTP-jE-4Cf" secondAttribute="trailing" constant="-20" id="yth-OO-QhR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="answerPicker" destination="RTP-jE-4Cf" id="4N3-BN-ZqW"/>
+                        <outlet property="nextButton" destination="nzM-7k-teX" id="C5f-QL-NWF"/>
+                        <outlet property="questionLabel" destination="erO-65-m75" id="TxC-T6-oRj"/>
+                        <outlet property="textAnswer" destination="vNS-T7-h76" id="45t-RN-Zfe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mb8-dp-it5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3568" y="-28"/>
         </scene>
     </scenes>
 </document>
